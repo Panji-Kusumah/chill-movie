@@ -1,0 +1,81 @@
+/* AUTH PAGE */
+.auth-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url('../assets/images/hero.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+/* DARK OVERLAY */
+.auth-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+/* CONTAINER */
+.auth-box {
+    position: relative;
+    background: #1c1c1c;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    z-index: 1;
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+/* TITLE */
+.auth-box h2 {
+    margin-bottom: 20px;
+}
+
+/* INPUT */
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
+
+/* LINK */
+.auth-box .link {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.google {
+    background: #444;
+}
+
+/* TEXT */
+.auth-box p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 500px) {
+    .auth-box {
+        padding: 25px;
+    }
+}
