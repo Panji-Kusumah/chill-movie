@@ -8,35 +8,42 @@ if (form) {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        const username = document.querySelector("input[name='username']").value;
-        const password = document.querySelector("input[name='password']").value;
-        const confirmPassword = document.querySelector("input[name='confirmPassword']");
+        // Ambil input
+        const usernameInput = document.querySelector("input[name='username']");
+        const passwordInput = document.querySelector("input[name='password']");
+        const confirmPasswordInput = document.querySelector("input[name='confirmPassword']");
+        const errorMsg = document.querySelector(".error-msg");
+
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+        const confirmPassword = confirmPasswordInput ? confirmPasswordInput.value.trim() : null;
 
         const isRegister = window.location.pathname.includes("register");
 
+        // Reset pesan error
+        if (errorMsg) errorMsg.textContent = "";
+
         // VALIDASI REGISTER
-        if (isRegister && confirmPassword) {
-            if (password !== confirmPassword.value) {
-                alert("Password tidak sama!");
+        if (isRegister && confirmPasswordInput) {
+            if (password !== confirmPassword) {
+                if (errorMsg) errorMsg.textContent = "Password tidak sama!";
                 return;
             }
         }
 
-        if (username && password) {
-            localStorage.setItem("user", JSON.stringify({
-                username: username
-            }));
-
-            alert(isRegister ? "Register berhasil!" : "Login berhasil!");
-
-            // ✅ FIX PATH
-            window.location.href = "index.html";
-        } else {
-            alert("Isi dulu semua field");
+        // VALIDASI FIELD KOSONG
+        if (!username || !password) {
+            if (errorMsg) errorMsg.textContent = "Isi dulu semua field!";
+            return;
         }
+
+        // Simpan user ke localStorage
+        localStorage.setItem("user", JSON.stringify({ username }));
+
+        // Redirect ke index.html
+        window.location.href = "index.html";
     });
 }
-
 
 // ==========================
 // GOOGLE LOGIN / REGISTER
@@ -53,18 +60,9 @@ function handleCredentialResponse(response) {
         picture: data.picture
     }));
 
-    const isRegister = window.location.pathname.includes("register");
-
-    alert(
-        isRegister 
-        ? "Register Google berhasil: " + data.name 
-        : "Login Google berhasil: " + data.name
-    );
-
-    // ✅ FIX PATH
+    // Langsung redirect, tanpa alert
     window.location.href = "index.html";
 }
-
 
 // ==========================
 // PARSE JWT TOKEN

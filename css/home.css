@@ -1,3 +1,10 @@
+/* ================= GLOBAL ================= */
+/* smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+
 /* ================= HEADER ================= */
 .header {
     background: rgba(0,0,0,0.8);
@@ -28,7 +35,6 @@
     transition: 0.3s;
 }
 
-/* Underline animation */
 .nav a::after {
     content: "";
     position: absolute;
@@ -53,7 +59,9 @@
 
 .avatar {
     width: 35px;
+    height: 35px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .logout {
@@ -65,19 +73,28 @@
     color: white;
 }
 
+/* logo */
+.logo {
+    width: 100px;
+}
+
 
 /* ================= HERO ================= */
 .hero {
     position: relative;
-    height: 85vh;
-    background: url('../assets/images/hero.jpg') center/cover no-repeat;
+    height: 100vh;
+
+    background: url('../assets/images/avengers-endgame-wallpapers.jpg') center/cover no-repeat;
+
     display: flex;
     align-items: center;
 }
 
+/* overlay cinematic */
 .hero-overlay {
     position: absolute;
     inset: 0;
+
     background: linear-gradient(
         to right,
         rgba(0,0,0,0.9) 20%,
@@ -86,10 +103,22 @@
     );
 }
 
+/* fade bawah (Netflix style) */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to top, #000, transparent);
+}
+
+/* konten */
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 500px;
+    color: white;
 }
 
 .hero-content h1 {
@@ -102,6 +131,7 @@
     margin-top: 10px;
     line-height: 1.5;
 }
+
 
 /* BUTTONS */
 .hero-buttons {
@@ -161,10 +191,12 @@
     flex-shrink: 0;
 }
 
+/* 🔥 UPGRADE hover */
 .movie-row img:hover {
     transform: scale(1.15);
     z-index: 2;
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    filter: brightness(1.2);
 }
 
 .movie-row::-webkit-scrollbar {
@@ -237,7 +269,6 @@
         width: 110px;
     }
 
-    /* Navbar disembunyikan (nanti bisa upgrade ke hamburger) */
     .nav {
         display: none;
     }

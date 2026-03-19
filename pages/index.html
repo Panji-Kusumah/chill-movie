@@ -6,45 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chill - Home</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="header">
-    <div class="container header-content">
-      <img src="../assets/images/logo.png" class="logo">
-
-      <nav class="nav">
-        <a href="#">Series</a>
-        <a href="#">Film</a>
-        <a href="#">Daftar Saya</a>
-        <a href="#about">About</a>
-      </nav>
-
-      <div class="header-right">
-        <img src="../assets/icons/user.png" class="avatar">
-        <a href="login.html" class="logout">Logout</a>
-      </div>
-    </div>
-  </header>
+  <!-- ================= HEADER (COMPONENT) ================= -->
+  <div id="header"></div>
 
   <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
+<section class="hero">
+  <div class="hero-overlay"></div>
 
-    <div class="container hero-content">
-      <h1>Avengers: Endgame</h1>
-      <p>Siap untuk nonton film terbaik hari ini?</p>
+  <div class="container hero-content">
+    <h1>Avengers: Endgame</h1>
+    <p>Melanjutkan Avengers Infinity War, dimana kejadian setelah Thanos berhasil mendapatkan semua infinity stones dan memusnahkan 50% semua mahluk hidup di alam semesta. Akankah para Avengers berhasil mengalahkan Thanos?</p>
 
-      <div class="hero-buttons">
-        <button class="btn">▶ Mulai</button>
-        <button class="btn secondary">ℹ Selengkapnya</button>
-      </div>
+    <div class="hero-buttons">
+      <button class="btn">▶ Mulai</button>
+      <button class="btn secondary">ℹ Selengkapnya</button>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ================= LANJUT NONTON ================= -->
   <section class="section">
@@ -52,9 +37,9 @@
       <h2>Lanjutkan Menonton</h2>
 
       <div class="movie-row">
-        <img src="../assets/images/movies/movie1.jpg">
-        <img src="../assets/images/movies/movie2.jpg">
-        <img src="../assets/images/movies/movie3.jpg">
+        <img src="../assets/images/Avengers_Infinity_War_poster.jpg" alt="Infinity War">
+        <img src="../assets/images/Avengers_Endgame_poster.jpg" alt="Endgame">
+        <img src="../assets/images/Avengers_Doomsday_poster.jpg" alt="Doomsday">
       </div>
     </div>
   </section>
@@ -65,9 +50,9 @@
       <h2>Top Rating Hari Ini</h2>
 
       <div class="movie-row">
-        <img src="../assets/images/movies/movie1.jpg">
-        <img src="../assets/images/movies/movie2.jpg">
-        <img src="../assets/images/movies/movie3.jpg">
+        <img src="../assets/images/War_Machine_film_poster.jpeg" alt="">
+        <img src="../assets/images/TheShadowsEdgePoster.jpg" alt="">
+        <img src="../assets/images/film-vigilante-2026-lk21.jpg" alt="">
       </div>
     </div>
   </section>
@@ -78,9 +63,9 @@
       <h2>Trending 🔥</h2>
 
       <div class="movie-row">
-        <img src="../assets/images/movies/movie1.jpg">
-        <img src="../assets/images/movies/movie2.jpg">
-        <img src="../assets/images/movies/movie3.jpg">
+        <img src="../assets/images/Keponakan_Penyihir.jpg" alt="">
+        <img src="../assets/images/Dune_Part_Three_poster.jpg" alt="">
+        <img src="../assets/images/Supergirl_(2026_film)_poster.jpg" alt="">
       </div>
     </div>
   </section>
@@ -91,9 +76,9 @@
       <h2>Rilis Baru</h2>
 
       <div class="movie-row">
-        <img src="../assets/images/movies/movie1.jpg">
-        <img src="../assets/images/movies/movie2.jpg">
-        <img src="../assets/images/movies/movie3.jpg">
+        <img src="../assets/images/Scream_7_(poster).jpg" alt="">
+        <img src="../assets/images/Spider-Man_Brand_New_Day_poster.jpg" alt="">
+        <img src="../assets/images/Ready_or_Not_2,_Here_I_Come_poster.jpeg" alt="">
       </div>
     </div>
   </section>
@@ -103,28 +88,15 @@
     <div class="container">
       <h2>Tentang Chill</h2>
       <p>
-        Chill adalah platform streaming film dan series yang menghadirkan hiburan terbaik
-        untuk menemani waktu santai kamu. Nikmati berbagai genre mulai dari aksi, drama,
-        hingga komedi dalam satu tempat.
+        Streaming film dan series favorit jadi lebih mudah.
+        Nikmati ribuan konten pilihan dengan kualitas terbaik,
+        kapan saja dan di mana saja. Saatnya bersantai, saatnya Chill.
       </p>
     </div>
   </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <img src="../assets/images/logo.png" class="logo">
-      <p>© 2026 Chill. All rights reserved.</p>
-
-      <div class="footer-links">
-        <a href="#">Genre</a>
-        <a href="#">FAQ</a>
-        <a href="#">Kontak</a>
-        <a href="#">Privasi</a>
-        <a href="#">Syarat & Ketentuan</a>
-      </div>
-    </div>
-  </footer>
+  <!-- ================= FOOTER (COMPONENT) ================= -->
+  <div id="footer"></div>
 
   <!-- ================= JS ================= -->
   <script src="../js/main.js"></script>
