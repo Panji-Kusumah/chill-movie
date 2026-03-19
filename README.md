@@ -1,35 +1,30 @@
 chill-movie/
 │
-├── pages/                  # Semua halaman
-│   ├── index.html          # Beranda
-│   ├── login.html
-│   ├── register.html
+├── index.html # Entry utama (beranda)
 │
-├── components/             # Reusable UI (opsional tapi PRO)
-│   ├── header.html
-│   ├── footer.html
-│   └── movie-card.html
+├── pages/
+│ ├── login.html
+│ └── register.html
 │
-├── assets/
-│   ├── images/
-│   │   ├── logo.png
-│   │   ├── hero.jpg
-│   │   ├── movies/
-│   │   │   ├── movie1.jpg
-│   │   │   └── ...
-│   │
-│   └── icons/
-│       ├── google.svg
-│       └── user.png
+├── components/ # optional (kalau mau pakai fetch JS)
+│ ├── header.html
+│ └── footer.html
 │
 ├── css/
-│   ├── style.css           # global
-│   ├── auth.css            # login & register
-│   └── home.css            # beranda
+│ ├── style.css # global
+│ ├── auth.css # login & register
+│ └── home.css # beranda
 │
 ├── js/
-│   ├── main.js             # global script
-│   ├── auth.js             # login logic (dummy dulu)
-│   └── slider.js           # hero / carousel
+│ ├── main.js
+│ ├── auth.js
+│ └── slider.js
 │
-└── README.md               # deskripsi project (nilai +++)
+├── assets/
+│ ├── images/
+│ │ ├── logo.png
+│ │ ├── hero.jpg
+│ │ └── movies/
+│ └── icons/
+│
+└── README.md
